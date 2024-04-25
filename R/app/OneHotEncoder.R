@@ -63,7 +63,3 @@ OneHotEncoder <- function() {
     transform = transform
   )
 }
-
-
-#library(assertthat)
-#assertthat::are_equal(names(transformed_training_data), names(transformed_inference_data))
