@@ -1,5 +1,5 @@
-# Use the official R base image
-FROM r-base:latest
+# Root Dockerfile (Dockerfile.base)
+FROM python:3.10.11
 
 # Arguments that can be passed at build time
 ARG USER_NAME
@@ -13,9 +13,14 @@ RUN useradd -m -u $USER_ID -s /bin/bash $USER_NAME
 # set root user for some admin tasks
 USER root
 
-# Install R packages
-RUN R -e "install.packages('data.table', dependencies=TRUE, repos='https://cran.rstudio.com/')"
-# RUN R -e "install.packages('recipes', dependencies=TRUE, repos='https://cran.rstudio.com/')"
+# Install Python dependencies
+RUN python3.10 -m ensurepip && \
+    python3.10 -m pip install --upgrade pip
+
+
+    # Copy the requirements and install
+COPY requirements.txt ./requirements.txt
+RUN pip install -r requirements.txt
 
 # Set the created user as the default user
 USER $USER_NAME

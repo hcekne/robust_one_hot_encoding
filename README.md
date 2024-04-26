@@ -1,4 +1,8 @@
 # robust_one_hot_encoding
-This repo showcases a robust way to deal with issues that can come up when doing one-hot-encoding
+This repo showcases a robust way to deal with issues that can come up when doing one-hot-encoding and provides robust solutions.
 
-The code is written as a short python scrip with examples and functions
+There are examples and code for both R and Python in the respective folders.
+
+### How to use
+
+To run the code, either run the code snippets directly on a system where you have the requirements installed. Otherwise, install docker and run the code through docker containers. Use the scripts docker_build_r_container.sh and then docker_run_r.sh to run the R docker container. To enter it and explore the code snippets, go to a terminal and enter the command "docker exec -it <container id>" /bin/bash/" . This will let you use the container interactively. (To find the container ID of the running container, use the command "docker ps -a" at a terminal.)

@@ -18,6 +18,9 @@ inference_data = pd.DataFrame({
 # Converting categorical columns in training_data to dummy variables with integers
 training_data_dummies = pd.get_dummies(training_data, columns=['color_1_', 'color_2_']).astype(int)
 
+# Converting categorical columns in training_data to dummy variables with integers
+color_1_train_dummies = pd.get_dummies(training_data, columns=['color_1_', 'color_2_']).astype(int).iloc[:, [1, 2,3, 4]]
+
 # Converting categorical columns in inference_data to dummy variables with integers
 inference_data_dummies = pd.get_dummies(inference_data, columns=['color_1_', 'color_2_']).astype(int)
 
