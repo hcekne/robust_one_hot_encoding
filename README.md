@@ -1,7 +1,13 @@
-# robust_one_hot_encoding
+# Robust One-Hot Encoding
+---
+
 This repo showcases a robust way to deal with issues that can come up when doing one-hot-encoding and provides robust solutions.
 
 There are examples and code for both R and Python in the respective folders.
+
+This code is also a supplement to an article I wrote on one-hot encoding which can be found here:
+
+https://medium.com/towards-data-science/robust-one-hot-encoding-930b5f8943af
 
 ### How to use
 
